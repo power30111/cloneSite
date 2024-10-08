@@ -1,0 +1,363 @@
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1140px;
+    z-index: 999;
+
+    transition: all 0.5s;
+}
+
+.main_header{
+    width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.left_header_side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* vertical-align: top; */
+}
+.logo_img_box{
+}
+
+.title_img_box{
+    position: relative;
+    vertical-align: middle;
+    margin-left: 12px;
+    padding-left: 16px;
+}
+
+header .title_img_box > img{
+    width: 160px;
+    height: 64px;
+}
+header .title_img_box::after{
+    content: '';
+    opacity: .3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 24px;
+    margin-top: -12px;
+    background: #888;
+}
+
+.right_header_side{
+    display: flex;
+    align-items: center;
+}
+
+
+.header_ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_ul > li{
+    margin-right: 34px;
+    padding: 0;
+}
+
+.send_credentials{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 34px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 70px;
+
+    /* border: 1px solid; */
+    background-color: #E7EAF1;
+}
+
+.total_btn{
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-image: url(../Mymo_img/total_menu.png);
+}
+
+.is_scroll{
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.90);
+}
+
+.modal_layer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.total_menu_layer{
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(4px);
+}
+
+.modal_layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.modal_layer.full{
+    align-items: flex-start;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+}
+
+.modal_layer.active{
+    display: flex;
+}
+.modal_layer.full.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_content{
+    width: 800px;
+    display: block;
+    background: #fff;
+    border-radius: 16px;
+    padding: 0;
+    position: relative;
+    outline: none;
+}
+
+.modal_layer.full .modal_content{
+    /* padding-top: 80px; */
+    /* padding-bottom: 84px; */
+    width: 100%;
+    border-radius: 0;
+    transform: translateY(-100%);
+    transition: all .3s;
+    min-width: 1120px;
+    background: transparent;
+}
+
+.modal_layer.active .modal_content{
+    transform: translateY(0);
+}
+
+.modal_inner{
+    margin-top: 55px;
+    width: 100%;
+    max-height: calc(100vh - 255px);
+    margin-bottom: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.modal_layer.full .modal_content .modal_inner{
+    width: 100%;
+    margin: 0;
+}
+
+.modal_layer.full .modal_content .modal_inner .total_menu_top{
+    height: 80px;
+    background: linear-gradient(90deg, #6C38FF, #3400A1);
+}
+
+.modal_layer.full .modal_content .modal_inner .menu_inner{
+    
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.total_menu_top .logo_box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.total_menu_top .logo_box .title{
+    position: relative;
+    margin-left: 12px;
+    padding-left: 16px;
+}
+
+.total_menu_top .logo_box .title p{
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.total_menu_top .logo_box .title::after{
+    content: '';
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: #B19DFF;
+}
+
+.modal_layer_full .modal_content .modal_inner .total_menu_bot{
+    background: #fff;
+}
+
+.modal_layer.full .modal_content .modal_inner .menu_inner{
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.total_menu_bot .menu_inner{
+    padding: 50px 0 80px;
+}
+
+.total_menu_depth1{
+    display: flex;
+    align-items: flex-start;
+    counter-reset: count 0;
+}
+
+.total_menu_depth1 > li{
+    padding-top: 0;
+    position: relative;
+    width: 220px;
+    font-size: 16px;
+}
+
+.total_menu_depth1 > li > h3{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.total_menu_depth2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.total_menu_depth2 > li{
+    text-align: left;
+}
+
+.total_menu_depth2 > li > a{
+    color: #666;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.total_menu_depth2 > li > a:hover{
+    color: #6632FB;;
+}
+
+.modal_layer.full .modal_content .modal_closeBtn{
+    position: absolute;
+    font-size: 0;
+    display: block;
+    top: 22px;
+    right: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translateX(560px);
+    background: url(../Mymo_img/total_menu_close.png) no-repeat center;
+}
+
+.modal_layer.full .modal_content .modal_inner .total_menu_bot{
+    background: #fff;
+    overflow: hidden;
+}
+
+.nav_sub{
+    position: absolute;
+    top: 112px;
+    left: 0;
+    width: auto;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    display: none;
+}
+
+.nav_sub_li{
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.header_ul .nav_sub .nav_sub_li{
+    margin: 0;
+}
+
+.header_ul .nav_sub .nav_sub_alink{
+    display: block;
+    min-width: 176px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.header_ul li .nav_sub{
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    padding: 15px 8px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.header_ul li .nav_sub.on{
+    display: block;
+}
+
+.header_ul li{
+    position: relative;
+}
+
+.header_ul li .nav_sub:after{
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 20px;
+    height: 14px;
+    margin-left: -10px;
+    background: url(../Mymo_img/ico-nav-tail.png) no-repeat center;
+}

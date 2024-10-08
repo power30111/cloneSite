@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 100%;
+            font-family: 'Hanwha', sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+            font-size: 15px;
+            /* overflow: hidden; */
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        a, a:link, a:visited{
+            text-decoration: none;
+            text-align: left;
+            color: #333;
+        }
+        button{
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @font-face {
+            font-family: 'Hanwha';
+            /* font-style: 'normal'; */
+            src: url(../HanwhaFont/03HanwhaL.ttf);
+        }
+        dd{
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/mymo_header.css">
+    <link rel="stylesheet" href="../css/mymo_footer.css">
+    <link rel="stylesheet" href="../css/mymo_product_intro_main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="main_header">
+            <div class="left_header_side">
+                <div class="logo_img_box">
+                    <a href="../html/index.html">
+                        <img src="../Mymo_img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="title_img_box">
+                    <img src="../Mymo_img/logo3_0104.jpg" alt="">
+                </div>
+            </div>
+            <div class="right_header_side">
+                <ul class="header_ul">
+                    <li>
+                        <p><a href="#;">상품안내</a></p>
+                    </li>
+                    <li>
+                        <p>고객센터</p>
+                    </li>
+                    <li>
+                        <p>인증센터</p>
+                    </li>
+                    <li>
+                        <p>은행소개</p>
+                    </li>
+                    <li>
+                        <p>금융소비자보호</p>
+                    </li>
+                </ul>
+                <div class="send_credentials">
+                    <a href="#">인증서 내보내기</a>
+                </div>
+                <button class="total_btn">
+                </button>
+            </div>
+        </div>
+        <aside class="modal_layer full total_menu_layer" id="popMenu">
+            <div class="modal_content">
+                <div class="modal_inner">
+                    <div class="total_menu_top">
+                        <div class="menu_inner">
+                            <div class="logo_box">
+                                <h2>
+                                    <a href="/">
+                                        <img src="../Mymo_img/logo_gnb.png" alt="">
+                                    </a>
+                                </h2>
+                                <div class="title">
+                                    <p>
+                                        <a href="https://hanwhasbank.com/main.act">
+                                            <img src="../Mymo_img/logo2_0104.png" alt="" width="129" height="32">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="total_menu_bot">
+                        <div class="menu_inner">
+                            <ul class="total_menu_depth1" id="ul_pop_menu">
+                                <li>
+                                    <h3>상품안내</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">예적금</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">대출</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">간편한도조회</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>고객센터</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">자주묻는질문(FAQ)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">약관자료</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이용시간안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">모바일APP설치안내</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>인증센터</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">공동인증서안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">스마트폰으로 내보내기</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PC로 가져오기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>은행소개</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">회사연혁</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">윤리강령</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">영업점안내</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>금융소비자보호</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">금융소비자보호 현장</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 체계</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 경보</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">개인정보처리방침</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">신용정보활용체제</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="modal_closeBtn"></button>
+            </div>
+
+        </aside>
+
+    </header>
+    <main>
+
+        <div class="container" id="container">
+            <div class="container_top_area">
+                <div class="location_bar">
+                    <a href="#;" class="location_home"></a>
+                    <h2 class="location_depth">
+                        상품안내
+                    </h2>
+                </div>
+                <div class="cont_top_box">
+                    <h1 class="cont_title1">상품안내</h1>
+                    <p class="cont_desc1">
+                        한화저축은행에서 추천드리는 상품입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="contents_wrapper">
+                <div class="tab_wrapper">
+                    <div class="tab_trigger_wrap">
+                        <a href="#;" class="tab_trigger on" id="tab_01">
+                            <span>예적금</span>
+                        </a>
+                        <a href="#;" class="tab_trigger" id="tab_02">
+                            <span>대출</span>
+                        </a>
+                    </div>
+                    <div class="tab_panel_wrap">
+                        <div class="tab_panel" id="tab_panel01" style="display: block;">
+                            <div class="cont_box1 product_main">
+                                <div class="cont_box_wrap">
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag">입출금</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">Mymo 파킹통장</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                 0.10
+                                                 <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="title">가입기간</dt>
+                                            <dd class="dd_desc">
+                                                 제한없음
+                                            </dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-prodcut01.png" alt="">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag type2">적금</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">Mymo 정기적금</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                 3.55
+                                                 <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="title">가입기간</dt>
+                                            <dd class="dd_desc">
+                                                 12
+                                                 <span class="unit">개월</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-money-box.png" alt="">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag type2">예금</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">Mymo 정기예금</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                 3.70
+                                                 <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="title">가입기간</dt>
+                                            <dd class="dd_desc">
+                                                 12
+                                                 <span class="unit">개월</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-calender.png" alt="">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag type2">예금</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">Mymo 회전 정기예금(6개월)</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                 3.40
+                                                 <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="title">가입기간</dt>
+                                            <dd class="dd_desc">
+                                                 24
+                                                 <span class="unit">개월</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-money.png" alt="">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag type2">예금</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">Mymo 회전 정기예금(12개월)</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                 3.80
+                                                 <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="title">가입기간</dt>
+                                            <dd class="dd_desc">
+                                                 36
+                                                 <span class="unit">개월</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-money.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="cont_box1">
+                                <div class="app_banner">
+                                    <div class="qr_img">
+                                        <img src="../Mymo_img/img-ios-qr.png" alt="">
+                                    </div>
+                                    <div class="cont">
+                                        <div class="tit">QR 코드를 스캔하여 'Mymo' 앱을 바로 설치하실 수 있습니다.</div>
+                                        <div class="txt">Mymo앱에서 이어서 진행을 하실 수 있습니다!</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab_panel" id="tab_panel02" style="display: none;">
+                            <div class="cont_box1 product_main">
+                                <div class="cont_box_wrap">
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag">직장인 신용대출</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">오렌지론</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">대출금리</dt>
+                                            <dd class="dd_desc">
+                                                <span class="unit">최저(연) </span>
+                                                9.76
+                                                <span class="unit"> % </span>
+                                                ~ 
+                                                <span class="unit">최대(연) </span>
+                                                18.82
+                                                <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="dt_title">최대한도</dt>
+                                            <dd class="dd_desc">5,000만원</dd>
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-prodcut05.png" alt="">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="cont_box">
+                                        <div class="tag_set">
+                                            <span class="tag">담보</span>
+                                        </div>
+                                        <h3 class="cont_box_title arrow_right_black">예적금담보대출</h3>
+                                        <dl class="cont_box_dl">
+                                            <dt class="dt_title">대출금리</dt>
+                                            <dd class="dd_desc">
+                                                <span class="unit">담보 예적금 금리 </span>
+                                                + 연 2.00
+                                                <span class="unit"> % </span>
+                                            </dd>
+                                            <dt class="dt_title">최대한도</dt>
+                                            <!-- <dd class="dd_desc"> -->
+                                                <dd class="dd_desc">
+                                                    <span class="unit">담보 예적금 </span>
+                                                    90
+                                                    <span class="unit"> % 이내</span>
+                                                </dd>
+                                            <!-- </dd> -->
+                                        </dl>
+                                        <div class="img_item">
+                                            <img src="../Mymo_img/img-money-box.png" alt="">
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="cont_box1"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_cont_wrap">
+                <div class="wrap_inner">
+                    <div class="footer_info_wrap">
+                        <h1>
+                            <img src="../Mymo_img/footer_logo.png" alt="">
+                        </h1>
+                        <span class="address">(14580) 경기도 부천시 신흥로 179 5층</span>
+                        <div class="info">
+                            <span>TEL : 1877-0927</span>
+                            <span>
+                                FAX : 032-329-9048
+                            </span>
+                        </div>
+                        <div class="info" id="officerReview">
+                            <span>한화저축은행 준법감시인 심의필 제2024-09호 (2024.01.05 ~ 2025.01.04)</span>
+                        </div>
+                    </div>
+
+                    <div class="footer_menu_wrap">
+                        <ul>
+                            <li>
+                                <a href="#">보안프로그램설치</a>
+                            </li>
+                            <li>
+                                <a href="#">보호금융상품등록부</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>개인정보처리방침</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>신용정보활용체제</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="ally_img_box">
+                            <a href="#">
+                                <img src="../Mymo_img/img-a11y.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_desc_wrap">
+                <div class="wrap_inner">
+                    <div class="copy">
+                        <p class="copyright">
+                            © 2024. HANWHA SAVINGS BANK CO, LTD. all rights reserved.
+                        </p>
+                    </div>
+                    <div class="quick_menu">
+                        <a href="#" class="btn_typeD" style="min-width: 100px;">한화저축은행 바로가기</a>
+                        <a href="#" class="btn_typeD">저축은행중앙회 바로가기</a>
+                        <a href="#" class="btn_typeD family" style="padding: 0 25px 0 16px;">FAMILY SITE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+         $(window).on('scroll', function() {
+            let now_y = +$(window).scrollTop();
+            let fixed_area = $('.fixed_area');
+            let header = $('header');
+
+            if(now_y > 10){
+                header.addClass('is_scroll');
+            }else{
+                header.removeClass('is_scroll');
+            }
+
+            if(now_y > 1900 && now_y < 6900){
+                fixed_area.addClass('fixed_on');
+                fixed_area.removeClass('fixed_end');
+            }else if(now_y > 6900){
+                fixed_area.removeClass('fixed_on');
+                fixed_area.addClass('fixed_end');
+            }else{
+                fixed_area.removeClass('fixed_on');
+                fixed_area.removeClass('fixed_end');
+            }
+
+            if(now_y > 3100){
+                $('.item2').css("transform",'translateY(-100%)');
+            }else{
+                $('.item2').css("transform",'translateY(0%)');
+            }
+            if(now_y > 4600){
+                $('.item3').css("transform",'translateY(-100%)');
+            }else{
+                $('.item3').css("transform",'translateY(0%)');
+            }
+
+            if(now_y > 6400){
+                $('.item4').css("transform",'translateY(-100%)');
+            }else{
+                $('.item4').css("transform",'translateY(0%)');
+            }
+
+
+
+            if(now_y < 3100){
+                $('.right > ul').children('li:eq(0)').addClass('on');
+                $('.right > ul').children('li:eq(1)').removeClass('on');
+                $('.current_idx').text('1');
+
+            }else{
+                $('.right > ul').children('li:eq(0)').removeClass('on');
+            }
+
+            if(now_y > 3100 && now_y < 4600){
+                $('.right > ul').children('li:eq(1)').addClass('on');
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+                $('.current_idx').text('2');
+
+            }else{
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+            }
+
+            if(now_y > 4600 && now_y < 6400){
+                $('.right > ul').children('li:eq(1)').removeClass('on');
+                $('.right > ul').children('li:eq(2)').addClass('on');
+                $('.current_idx').text('3');
+            }
+
+            if(now_y > 6400){
+                $('.item4').css("transform",'translateY(-100%)');
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+                $('.right > ul').children('li:eq(3)').addClass('on');
+                $('.current_idx').text('4');
+
+            }else{
+                $('.right > ul').children('li:eq(3)').removeClass('on');
+            }
+
+        })
+    
+        $('.total_btn').on('click',function(){
+            $('#popMenu').addClass('active');
+            $('#popMenu').css("z-index","9999");
+        })
+        
+        $('.modal_closeBtn').on('click',function(){
+            $('#popMenu').removeClass('active');
+            $('#popMenu').css("z-index","");
+        })
+
+        let tab_01 = $('#tab_01');
+        let tab_02 = $('#tab_02');
+        let tab_panel01 = $('#tab_panel01');
+        let tab_panel02 = $('#tab_panel02');
+
+        tab_01.on('click',function(){
+            tab_01.addClass('on');
+            tab_panel01.css('display','block');
+            tab_02.removeClass('on');
+            tab_panel02.css('display','none');
+
+
+        })
+        tab_02.on('click',function(){
+            tab_02.addClass('on');
+            tab_panel02.css('display','block');
+            tab_01.removeClass('on');
+            tab_panel01.css('display','none');
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 100%;
+            font-family: 'Hanwha', sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+            font-size: 15px;
+            /* overflow: hidden; */
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        a, a:link, a:visited{
+            text-decoration: none;
+            text-align: left;
+            color: #333;
+        }
+        button{
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @font-face {
+            font-family: 'Hanwha';
+            src: url(../HanwhaFont/03HanwhaL.ttf);
+        }
+
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: var(--swiper-navigation-sides-offset, 30px);
+        }
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset, 30px);
+        }
+
+        .swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 20px));
+            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 20px));
+        }
+        .swiper-pagination-bullet-active {
+            background: #ff0000;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../css/mymo_header.css" />
+    <link rel="stylesheet" href="../css/mymo_main_visual.css" />
+    <link rel="stylesheet" href="../css/mymo_footer.css">
+    
+</head>
+<body>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <header>
+        
+        <div class="main_header">
+            <div class="left_header_side">
+                <div class="logo_img_box">
+                    <a href="../html/index.html">
+                        <img src="../Mymo_img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="title_img_box">
+                    <img src="../Mymo_img/logo3_0104.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="right_header_side">
+                <ul class="header_ul">
+                    <li>
+                        <p>
+                            <a href="../html/product_intro.html">상품안내</a>
+                            <div class="nav_sub">
+                                <ul>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            예적금
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            대출
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            간편한도조회
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </p> -->
+                    </li>
+                    <li>
+                        <p>고객센터
+                            <div class="nav_sub">
+                                <ul>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            자주묻는질문
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            공지사항
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            이벤트
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            약관자료
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            이용시간안내
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            모바일APP설치안내
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </p> -->
+                    </li>
+                    <li>
+                        <p>인증센터
+                            <div class="nav_sub">
+                                <ul>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            공동인증서안내
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            스마트폰으로 내보내기
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            PC로 가져오기
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </p> -->
+                    </li>
+                    <li>
+                        <p>은행소개
+                            <div class="nav_sub">
+                                <ul>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            회사연혁
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            윤리강령
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            영업점안내
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </p> -->
+                    </li>
+                    <li>
+                        <p>금융소비자보호
+                            <div class="nav_sub">
+                                <ul>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            금융소비자보호 헌장
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            금융소비자보호 체계
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            금융소비자보호 공지사항
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            금융소비자보호 경보
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            개인정보처리방침
+                                        </a>
+                                    </li>
+                                    <li class="nav_sub_li">
+                                        <a href="#;" class="nav_sub_alink">
+                                            신용정보활용체제
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </p> -->
+                    </li>
+                </ul>
+                <div class="send_credentials">
+                    <a href="#">인증서 내보내기</a>
+                </div>
+                <button class="total_btn">
+                </button>
+            </div>
+        </div>
+
+        <aside class="modal_layer full total_menu_layer" id="popMenu">
+            <div class="modal_content">
+                <div class="modal_inner">
+                    <div class="total_menu_top">
+                        <div class="menu_inner">
+                            <div class="logo_box">
+                                <h2>
+                                    <a href="/">
+                                        <img src="../Mymo_img/logo_gnb.png" alt="">
+                                    </a>
+                                </h2>
+                                <div class="title">
+                                    <p>
+                                        <a href="https://hanwhasbank.com/main.act">
+                                            <img src="../Mymo_img/logo2_0104.png" alt="" width="129" height="32">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="total_menu_bot">
+                        <div class="menu_inner">
+                            <ul class="total_menu_depth1" id="ul_pop_menu">
+                                <li>
+                                    <h3>상품안내</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">예적금</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">대출</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">간편한도조회</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>고객센터</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">자주묻는질문(FAQ)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">약관자료</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이용시간안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">모바일APP설치안내</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>인증센터</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">공동인증서안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">스마트폰으로 내보내기</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PC로 가져오기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>은행소개</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">회사연혁</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">윤리강령</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">영업점안내</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>금융소비자보호</h3>
+                                    <ul class="total_menu_depth2">
+                                        <li>
+                                            <a href="#">금융소비자보호 현장</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 체계</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">금융소비자보호 경보</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">개인정보처리방침</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">신용정보활용체제</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="modal_closeBtn"></button>
+            </div>
+
+        </aside>
+
+    </header>
+
+    <main>
+        <div class="main_visual_sec">
+            <div class="cont_inner">
+
+                <div class="content_wrap">
+                        <div class="main_left_side">
+
+                            <div class="main_banner swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide banner1">
+                                        <div class="main_swiper_title">
+                                            <p>언제, 어디서나 든든한 나만의</p>
+                                            <div class="text_wrap mgt20">
+                                                <img src="../Mymo_img/img-main-mymo-text.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="main_swiper_desc">
+                                            <p>당신의 편리하고 안전한 금융 생활을 위해
+                                            <br>
+                                            <strong>마이모</strong>
+                                            가 함께할께요!</p>
+                                        </div>
+                                        <div class="main_swiper_img_btn_box">
+                                            <a href="#" class="btn_link" title="모바일 App 설치안내"></a>
+                                            <a href="#" class="btn_link" title="모바일 App 설치안내"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide banner2">
+                                        <div class="title">
+                                            <p>
+                                                오렌지론
+                                                <br>
+                                                <br>
+                                                복잡한 절차없이,
+                                            </p>
+                                            <strong>빠르고 편리한 대출</strong>
+                                        </div>
+                                        <div class="detail_info type_main1">
+                                            <dl>
+                                                <dt>최대한도</dt>
+                                                <dd>5,000
+                                                    <span class="unit">만원</span>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>대출금리</dt>
+                                                <dd>
+                                                    <span class="unit">최저 (연)</span>
+                                                    9.76
+                                                    <span class="unit"> % ~ 최대 (연)</span>
+                                                    18.82
+                                                    <span class="unit"> %</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="btn_box">
+                                            <a href="#" class="btn_link">간편한도조회</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide banner3">
+                                        <div class="title">
+                                            <p>한달 전체 출석하면 보너스 300원</p>
+                                            <div class="text-wrap">
+                                                <div class="img_box">
+                                                    <img src="../Mymo_img/img-main-mymo-text01.png" alt=""
+                                                    class="btn_link">
+                                                </div>
+                                                <strong>출석체크</strong>
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <p>2024.01.01 ~ 2024.12.31</p>
+                                            <strong>매일 출석체크하고, 포인트 받아가세요~</strong>
+                                        </div>
+                                        <div class="btn_box">
+                                            <a href="#" class="btn_link">이벤트 바로가기</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main_right_side">
+                            <div class="main_banner swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide banner1">
+                                        <div class="visual_box1">
+                                            <span class="slide_idx">01</span>
+                                            <div class="visual_sub_coin1"></div>
+                                            <div class="visual_sub_01"></div>
+                                            <div class="visual_sub_coin2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide banner2">
+                                        <div class="visual_box1">
+                                            <span class="slide_idx">02</span>
+                                            <div class="visual_sub_1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide banner3">
+                                        <div class="visual_box1">
+                                            <div class="slide_idx">03</div>
+                                            <div class="visual_sub_1"></div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="btn_slide swiper-button-next"></div>
+                                <div class="btn_slide swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+        <!-- 스와이퍼 버튼이랑 rightSideImage 조그만하게 두는거 남음. -->
+
+        <div class="main_cont_product">
+            <div class="main_cont_inner">
+                <div class="cont_wrap">
+                    <div class="left">
+                        <div class="title_img_box">
+                            <img src="../Mymo_img/img-cont-title01.png" alt="">
+                        </div>
+                        <p class="desc">
+                            현재 Mymo에서
+                            <br>
+                            고객님들이 가장 많이 찾고 있는 상품입니다.
+                        </p>
+                        <div class="btn_box">
+                            <a href="#" class="btn btn_main_cont">더 많은 상품보기
+                            <i class="btn_arrow_right"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="card_box_wrap">
+                            <a href="#" class="flip_card_item type_1">
+                                <div class="flip">
+                                    <div class="front">
+                                        <span class="tag">적금</span>
+                                        <p class="title">Mymo 정기적금</p>
+                                        <div class="hashtag_wrap">
+                                            <span># 직장인</span>
+                                            <span># NO서류</span>
+                                            <span># Mymo 대표 상품</span>
+                                        </div>
+                                        <div class="img_item" aria-hidden="true">
+                                            <img src="../Mymo_img/img-prodcut04.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <span class="tag">
+                                            적금
+                                        </span>
+                                        <p class="title">Mymo 정기적금</p>
+                                        <dl class="cont_box_dl type_main1">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                3.55
+                                                <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="dt_title">가입기간</dt>
+                                            <dd class="dd_desc"> 12
+                                                <span class="unit">개월</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flip_card_item type_2">
+                                <div class="flip">
+                                    <div class="front">
+                                        <span class="tag">입출금</span>
+                                        <p class="title">Mymo 파킹통장</p>
+                                        <div class="hashtag_wrap">
+                                            <span># 목돈마련</span>
+                                            <span># 단기목표</span>
+                                            <span># 자유로운 납입방식</span>
+                                        </div>
+                                        <div class="img_item" aria-hidden="true">
+                                            <img src="../Mymo_img/img-prodcut01.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <span class="tag">
+                                            입출금
+                                        </span>
+                                        <p class="title">Mymo 파킹통장</p>
+                                        <dl class="cont_box_dl type_main2">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                0.10
+                                                <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="dt_title">가입기간</dt>
+                                            <dd class="dd_desc"> 
+                                                <span class="unit">제한없음</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flip_card_item type_3">
+                                <div class="flip">
+                                    <div class="front">
+                                        <span class="tag">직장인 신용대출</span>
+                                        <p class="title">오렌지론</p>
+                                        <div class="hashtag_wrap">
+                                            <span># 직장인</span>
+                                            <span># 신용대출</span>
+                                            <span># 현재 많이 찾는 상품</span>
+                                        </div>
+                                        <div class="img_item" aria-hidden="true">
+                                            <img src="../Mymo_img/img-prodcut05.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <span class="tag">
+                                            직장인 신용대출
+                                        </span>
+                                        <p class="title">오렌지론</p>
+                                        <dl class="cont_box_dl type_main1">
+                                            <dt class="dt_title">금리(연)</dt>
+                                            <dd class="dd_desc">
+                                                <span class="unit">최저 연</span>
+                                                9.76
+                                                <span class="unit"> %</span>
+                                                <br>
+                                                ~ 
+                                                <span class="unit">최대 연 </span>
+                                                 18.82
+                                                <span class="unit"> %</span>
+                                            </dd>
+                                            <dt class="dt_title">최대한도</dt>
+                                            <dd class="dd_desc"> 5,000
+                                                <span class="unit"> 만원</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main_cont_motion">
+            <div class="title_img_box">
+                <img src="../Mymo_img/img-cont-title02.png" alt="">
+            </div>
+            <div class="fixed_area" style="left: 0;">
+                <div class="left">
+                    <ul>
+                        <li class="item1">
+                            <img src="../Mymo_img/img-main-scroll01.png" alt="">
+                        </li>
+                        <li class="item2">
+                            <img src="../Mymo_img/img-main-scroll02.png" alt="">
+                        </li>
+                        <li class="item3">
+                            <img src="../Mymo_img/img-main-scroll03.png" alt="">
+                        </li>
+                        <li class="item4">
+                            <img src="../Mymo_img/img-main-scroll04.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="cont_idx">
+                        <span class="current_idx">01</span>
+                        <span class="total_idx">04</span>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <ul>
+                        <li class="on">
+                            <p class="title">
+                                <span> 모바일로 쉽고 간편한</span>
+                                <br>
+                                <span> 계좌개설과 이체</span> 
+                            </p>
+                            <p class="desc">
+                                <span> 간편한 계좌개설!</span>
+                                <br>
+                                <span> 몇 번의 터치로 손쉽게 이체해보세요. </span>
+                            </p>
+                            <div class="btn_box">
+                                <a href="#" class="btn btn_main_cont">
+                                    <span>APP 다운로드</span>
+                                    <i class="btn_arrow_right"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="">
+                            <p class="title">
+                                <span> 복잡한 절차 없는 </span>
+                                <br>
+                                <span> 상품가입 </span>
+                            </p>
+                            <p class="desc">
+                                <span> 빠르고 편리한 상품가입 프로세스로</span>
+                                <br>
+                                <span> 영업점 방문없이 간편하게 가입해보세요! </span>
+                            </p>
+                            <div class="btn_box">
+                                <a href="#" class="btn btn_main_cont">
+                                    <span>상품안내</span>
+                                    <i class="btn_arrow_right"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="">
+                            <p class="title">
+                                <span> 다양한 이벤트로 </span>
+                                <br>
+                                <span> 즐거운 금융생활</span>
+                            </p>
+                            <p class="desc">
+                                <span> 출석체크와 재밌는 퀴즈를 풀고</span>
+                                <br>
+                                <span> 포인트를 받아 사용해보세요!</span>
+                            </p>
+                            <div class="btn_box">
+                                <a href="#" class="btn btn_main_cont">
+                                    <span>이벤트</span>
+                                    <i class="btn_arrow_right"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="">
+                            <p class="title">
+                                <span> 안전하고 편리한</span>
+                                <br>
+                                <span> 공동인증서 </span>
+                            </p>
+                            <p class="desc">
+                                <span> PC에 저장된 공동인증서를 스마트폰으로</span>
+                                <br>
+                                <span> 보내 편리하고 안전한 금융생활 되세요! </span>
+                            </p>
+                            <div class="btn_box">
+                                <a href="#" class="btn btn_main_cont">
+                                    <span>인증센터</span>
+                                    <i class="btn_arrow_right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main_scroll_bg1"></div>
+            <div class="main_scroll_bg2"></div>
+            <div class="main_scroll_bg3"></div>
+            <div class="main_scroll_bg4"></div>
+            
+        </div>
+
+        <div class="notice_wrapper">
+            <div class="main_notice">
+                <h3 class="cont_title5">공지사항 </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="list_item">
+                                <span class="title">건강보험공단 시스템점검 공지(08/22)</span>
+                                <span class="date">2024.08.22</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="list_item">
+                                <span class="title">대출비교플랫폼 페이코 업무 제휴 중단안내</span>
+                                <span class="date">2024.08.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="list_item">
+                                <span class="title">경찰청/도로교통공단 운전면허증 진위 확인서비스 점검 공지(08/12)</span>
+                                <span class="date">2024.08.12</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="list_item">
+                                <span class="title">Mymo OX퀴즈 관련 안내</span>
+                                <span class="date">2024.06.17</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="btn more_link">더보기</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_cont_wrap">
+                <div class="wrap_inner">
+                    <div class="footer_info_wrap">
+                        <h1>
+                            <img src="../Mymo_img/footer_logo.png" alt="">
+                        </h1>
+                        <span class="address">(14580) 경기도 부천시 신흥로 179 5층</span>
+                        <div class="info">
+                            <span>TEL : 1877-0927</span>
+                            <span>
+                                FAX : 032-329-9048
+                            </span>
+                        </div>
+                        <div class="info" id="officerReview">
+                            <span>한화저축은행 준법감시인 심의필 제2024-09호 (2024.01.05 ~ 2025.01.04)</span>
+                        </div>
+                    </div>
+
+                    <div class="footer_menu_wrap">
+                        <ul>
+                            <li>
+                                <a href="#">보안프로그램설치</a>
+                            </li>
+                            <li>
+                                <a href="#">보호금융상품등록부</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>개인정보처리방침</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>신용정보활용체제</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="ally_img_box">
+                            <a href="#">
+                                <img src="../Mymo_img/img-a11y.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_desc_wrap">
+                <div class="wrap_inner">
+                    <div class="copy">
+                        <p class="copyright">
+                            © 2024. HANWHA SAVINGS BANK CO, LTD. all rights reserved.
+                        </p>
+                    </div>
+                    <div class="quick_menu">
+                        <a href="#" class="btn_typeD" style="min-width: 100px;">한화저축은행 바로가기</a>
+                        <a href="#" class="btn_typeD">저축은행중앙회 바로가기</a>
+                        <a href="#" class="btn_typeD family" style="padding: 0 25px 0 16px;">FAMILY SITE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: false,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                // type: "bullets"
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            speed: 300, // 사진 출발해서 도작하는 시간
+            // direction: 'vertical', // horizontal
+            effect: 'slide'
+            // direction랑 slidesPerView 개수 바꿔가면서 하면 좋음.
+            // 'slide', 'fade', 'cube', 'coverflow', 'flip', 'creative' or 'cards'
+        });
+    
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: false,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false,
+                // type: "bullets"
+            },
+            // navigation: {
+                // nextEl: ".swiper-button-next",
+                // prevEl: ".swiper-button-prev",
+            // },
+            speed: 150, // 사진 출발해서 도작하는 시간
+            // direction: 'vertical', // horizontal
+            effect: 'fade',
+            fadeEffect: { 
+                crossFade: true 
+            },
+        });
+
+        swiper.controller.control = swiper2;
+        swiper2.controller.control = swiper;
+
+        // 스크롤이 bg2까지 내려오면, 변경.
+        // $(this).addClass("class_name");
+        // $(this).removeClass("class_name");
+
+        // item1 
+        // item2
+        // item3
+        // item4
+        // current_idx
+        //right > ul > li:nth-child(1,2,3,4) 에 on class 
+        
+        $(window).on('scroll', function() {
+            let now_y = +$(window).scrollTop();
+            let fixed_area = $('.fixed_area');
+            let header = $('header');
+
+            if(now_y > 10){
+                header.addClass('is_scroll');
+            }else{
+                header.removeClass('is_scroll');
+            }
+
+            if(now_y > 1900 && now_y < 6900){
+                fixed_area.addClass('fixed_on');
+                fixed_area.removeClass('fixed_end');
+            }else if(now_y > 6900){
+                fixed_area.removeClass('fixed_on');
+                fixed_area.addClass('fixed_end');
+            }else{
+                fixed_area.removeClass('fixed_on');
+                fixed_area.removeClass('fixed_end');
+            }
+
+            if(now_y > 3100){
+                $('.item2').css("transform",'translateY(-100%)');
+            }else{
+                $('.item2').css("transform",'translateY(0%)');
+            }
+            if(now_y > 4600){
+                $('.item3').css("transform",'translateY(-100%)');
+            }else{
+                $('.item3').css("transform",'translateY(0%)');
+            }
+
+            if(now_y > 6400){
+                $('.item4').css("transform",'translateY(-100%)');
+            }else{
+                $('.item4').css("transform",'translateY(0%)');
+            }
+
+
+
+            if(now_y < 3100){
+                $('.right > ul').children('li:eq(0)').addClass('on');
+                $('.right > ul').children('li:eq(1)').removeClass('on');
+                $('.current_idx').text('1');
+
+            }else{
+                $('.right > ul').children('li:eq(0)').removeClass('on');
+            }
+
+            if(now_y > 3100 && now_y < 4600){
+                $('.right > ul').children('li:eq(1)').addClass('on');
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+                $('.current_idx').text('2');
+
+            }else{
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+            }
+
+            if(now_y > 4600 && now_y < 6400){
+                $('.right > ul').children('li:eq(1)').removeClass('on');
+                $('.right > ul').children('li:eq(2)').addClass('on');
+                $('.current_idx').text('3');
+            }
+
+            if(now_y > 6400){
+                $('.item4').css("transform",'translateY(-100%)');
+                $('.right > ul').children('li:eq(2)').removeClass('on');
+                $('.right > ul').children('li:eq(3)').addClass('on');
+                $('.current_idx').text('4');
+
+            }else{
+                $('.right > ul').children('li:eq(3)').removeClass('on');
+            }
+
+        })
+    
+        $('.total_btn').on('click',function(){
+            $('#popMenu').addClass('active');
+            $('#popMenu').css("z-index","9999");
+        })
+        
+        $('.modal_closeBtn').on('click',function(){
+            $('#popMenu').removeClass('active');
+            $('#popMenu').css("z-index","");
+        })
+
+        $('.header_ul > li').hover(function(){
+            $(this).children('.nav_sub').addClass('on');
+        },function(el){
+            $(this).children('.nav_sub').removeClass('on');
+        })
+
+
+    </script>
+</body>
+</html>
